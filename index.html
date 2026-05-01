@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shexo Decoratie — Gyproc-renovaties Mechelen & Vilvoorde</title>
+<meta name="description" content="Gyproc-specialist met 5 jaar internationale ervaring. Plafondbekleding, akoestische isolatie en binnenafwerking met officiële BTW-factuur en garantie. Actief in Mechelen, Vilvoorde en omgeving.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1F4E79;
+    --blue: #2E75B6;
+    --light-blue: #D5E8F0;
+    --white: #FFFFFF;
+    --off-white: #F7FAFC;
+    --dark: #0D1B2A;
+    --gray: #4A5568;
+    --light-gray: #E8EDF2;
+    --accent: #C8A96E;
+    --accent-light: #F5EDD8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 27, 42, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: var(--dark) !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    transition: opacity 0.2s !important;
+  }
+
+  .nav-cta:hover { opacity: 0.88; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 60%, #1a3a5c 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 60px 80px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 600px 400px at 80% 50%, rgba(46,117,182,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 300px 300px at 20% 80%, rgba(200,169,110,0.08) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.35);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.7;
+    margin-bottom: 44px;
+    font-weight: 300;
+    max-width: 480px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(200,169,110,0.35);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(200,169,110,0.45);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  /* Hero right visual */
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+  }
+
+  .stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .stat-value small {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--navy);
+    padding: 28px 60px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(200,169,110,0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 60px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--off-white); }
+
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 36px 28px;
+    border: 1px solid var(--light-gray);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(31,78,121,0.1);
+    border-color: var(--blue);
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--light-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+/* ── SERVICE CARD IMAGES ── */
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 16px;
+  display: block;
+}
+
+
+  /* ── USP ── */
+  .usp { background: var(--white); }
+
+  .usp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .usp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .usp-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--light-gray);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .usp-item:hover {
+    border-color: var(--blue);
+    background: var(--light-blue);
+  }
+
+  .usp-num {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .usp-item h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .usp-item p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .usp-visual {
+    background: linear-gradient(145deg, var(--navy) 0%, var(--dark) 100%);
+    border-radius: 20px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .usp-visual::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(200,169,110,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .usp-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.55;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .usp-quote::before {
+    content: '"';
+    font-size: 80px;
+    color: var(--accent);
+    opacity: 0.4;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    line-height: 1;
+  }
+
+  .usp-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .usp-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+  }
+
+  .usp-author-info strong {
+    display: block;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .usp-author-info span {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+  }
+
+  .usp-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+    z-index: 1;
+  }
+
+  .usp-stat strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .usp-stat span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+  }
+
+  /* ── VISIE ── */
+  .visie {
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .visie .section-label { color: var(--accent); }
+  .visie .section-title { color: var(--white); margin: 0 auto 24px; }
+
+  .visie-text {
+    font-size: 18px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto 48px;
+    font-weight: 300;
+  }
+
+  .visie-tagline {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--accent);
+    border-top: 1px solid rgba(200,169,110,0.35);
+    border-bottom: 1px solid rgba(200,169,110,0.35);
+    padding: 20px 40px;
+  }
+
+  /* ── DOELGROEP ── */
+  .doelgroep { background: var(--off-white); }
+
+  .doelgroep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .dg-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 44px;
+    border: 1px solid var(--light-gray);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dg-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--navy);
+  }
+
+  .dg-card.b2b::before { background: var(--accent); }
+
+  .dg-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--light-blue);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .dg-card.b2b .dg-tag {
+    color: #8B6914;
+    background: var(--accent-light);
+  }
+
+  .dg-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+
+  .dg-card p {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  .dg-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dg-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  .dg-features li::before {
+    content: '✓';
+    width: 20px;
+    height: 20px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 20px;
+  }
+
+  .dg-card.b2b .dg-features li::before { background: var(--accent); color: var(--dark); }
+
+  /* ── TARIEVEN ── */
+  .tarieven { background: var(--white); }
+
+  .tarieven-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .tarieven-note {
+    font-size: 13px;
+    color: var(--gray);
+    font-style: italic;
+    background: var(--light-blue);
+    padding: 10px 18px;
+    border-radius: 6px;
+    border-left: 3px solid var(--blue);
+  }
+
+  .tarieven-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .tarief-card {
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .tarief-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(31,78,121,0.1);
+    border-color: var(--navy);
+  }
+
+  .tarief-card.featured {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+
+  .tarief-type {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .tarief-card.featured .tarief-type { color: rgba(255,255,255,0.65); }
+
+  .tarief-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .tarief-card.featured .tarief-price { color: var(--accent); }
+
+  .tarief-unit {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+
+  .tarief-card.featured .tarief-unit { color: rgba(255,255,255,0.55); }
+
+  .tarief-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .tarief-card.featured .tarief-desc { color: rgba(255,255,255,0.7); }
+
+  .tarief-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--dark);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── WERKGEBIED ── */
+  .werkgebied { background: var(--off-white); }
+
+  .werkgebied-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 48px;
+  }
+
+  .regio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .regio-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--dark);
+  }
+
+  .regio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--blue);
+    min-width: 12px;
+  }
+
+  .regio-item.primary .regio-dot {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(200,169,110,0.25);
+  }
+
+  .regio-tag {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .werkgebied-map {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-visual {
+    font-size: 80px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+
+  .map-text {
+    color: rgba(255,255,255,0.75);
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 260px;
+  }
+
+  .map-text strong {
+    color: var(--white);
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--white); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .review-card {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--light-gray);
+    position: relative;
+  }
+
+  .stars {
+    color: var(--accent);
+    font-size: 16px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .review-text {
+    font-size: 15px;
+    color: var(--dark);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .review-author {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .review-location {
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--off-white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    margin-top: 48px;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  .contact-detail-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    min-width: 40px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .social-instagram {
+    background: linear-gradient(135deg, #E1306C, #833AB4);
+    color: var(--white);
+  }
+
+  .social-facebook {
+    background: #1877F2;
+    color: var(--white);
+  }
+
+  /* Contact Form */
+  .contact-form {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 44px;
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 4px 30px rgba(31,78,121,0.06);
+  }
+
+  .contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .form-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 28px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--dark);
+    background: var(--off-white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(46,117,182,0.12);
+    background: var(--white);
+  }
+
+  .form-group textarea {
+    height: 110px;
+    resize: vertical;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 4px;
+  }
+
+  .form-submit:hover {
+    background: var(--blue);
+    transform: translateY(-1px);
+  }
+
+  .form-disclaimer {
+    font-size: 12px;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 60px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+
+  .footer-brand .nav-logo {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 320px;
+    font-weight: 300;
+  }
+
+  .footer-col h4 {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge, .hero h1, .hero-sub, .hero-btns, .hero-card {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero h1 { animation-delay: 0.1s; }
+  .hero-sub { animation-delay: 0.2s; }
+  .hero-btns { animation-delay: 0.3s; }
+  .hero-card { animation-delay: 0.2s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 72px 24px; }
+    .hero { padding: 100px 24px 72px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .trust-bar { padding: 24px; gap: 24px; }
+    .usp-grid { grid-template-columns: 1fr; }
+    .doelgroep-grid { grid-template-columns: 1fr; }
+    .werkgebied-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer { padding: 48px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Shexo <span>Decoratie</span></div>
+  <ul class="nav-links">
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#usp">Waarom wij</a></li>
+    <li><a href="#tarieven">Tarieven</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Offerte aanvragen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">Mechelen & Vilvoorde — Vlaanderen</div>
+      <h1>Gyproc-renovaties met <em>internationale</em> vakprecisie</h1>
+      <p class="hero-sub">Van plafondbekleding tot volledige binnenafwerking met officiële BTW-factuur, garantie en 5 jaar internationale ervaring. Lokaal, bereikbaar en persoonlijk.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Gratis offerte aanvragen →</a>
+        <a href="#diensten" class="btn-ghost">Onze diensten ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img src="https://rinovato.be/wp-content/uploads/2025/11/gyprocwerken-gent-1.jpeg" alt="Gybroc werken" width="600" height="400">
+       
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-icon">🧾</div>Officiële BTW-factuur</div>
+  <div class="trust-item"><div class="trust-icon">🛡️</div>Garantie op elk project</div>
+  <div class="trust-item"><div class="trust-icon">⏱️</div>Reactie binnen 24 uur</div>
+  <div class="trust-item"><div class="trust-icon">📍</div>Lokaal & persoonlijk</div>
+  <div class="trust-item"><div class="trust-icon">🏆</div>5 jaar internationale ervaring</div>
+</div>
+
+<!-- DIENSTEN -->
+<section class="diensten services" id="diensten">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label">Wat wij doen</div>
+        <h2 class="section-title">Onze Diensten</h2>
+        <p class="section-sub">Vakwerk voor elke ruimte: particulier of commercieel. Elke opdracht wordt persoonlijk begeleid van offerte tot oplevering.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Plafondbekleding</h3>
+        <p>Strakke gyproc-plafonds op maat, vlak en perfect afgewerkt voor elke ruimte en stijl.</p>
+        <img src="https://www.interieurdesigner.be/wp-content/uploads/plagyp-gyproc-plafond-1200x800.jpg.webp" alt="Plafondbekleding" width="300" height="200">
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔇</div>
+        <h3>Akoestische Isolatie</h3>
+        <p>Geluidsdemping via akoestische gyprocplaten: de oplossing voor thuiskantoren, slaapkamers en horeca.</p>
+        <img src="https://www.isolatie-info.be/wp-content/uploads/isolatie-met-gipsplaat.jpg" alt="Akoestische Isolatie" width="414" height="276">
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <h3>Brandwerende Systemen</h3>
+        <p>Gecertificeerde brandwerende wanden en plafonds voor commerciële ruimtes en appartementen.</p>
+        <img src="https://pro.gyproc.be/sites/default/files/images/paragraphs/plagyp_d_rf-2x125_a.jpg" alt="Brandwerende Systemen" width="414" height="319">
+
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪣</div>
+        <h3>Binnenpleister & Egalisatie</h3>
+        <p>Gladde muren vormen de perfecte basis voor elk verfwerk, nauwkeurig en zonder zichtbare naden.</p>
+        <img src="https://www.gyproclatenplaatsen.be/sites/89/images/plamuurwerken.jpg" alt="Binnenpleister & Egalisatie" width="414" height="275">
+
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛁</div>
+        <h3>Sanitaire Bekleding</h3>
+        <p>Watervaste gyproc-afwerking voor badkamers en andere vochtige ruimtes.</p>
+        <img src="https://bouwplannen.be/wp-content/uploads/2025/01/gyproc-betegelen-scaled.jpg" alt="Sanitaire Bekleding" width="414" height="277">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="usp" id="usp">
+  <div class="container">
+    <div class="usp-grid">
+      <div>
+        <div class="section-label">Waarom Shexo Decoratie</div>
+        <h2 class="section-title">Niet de goedkoopste.<br>Wel de betrouwbaarste.</h2>
+        <p class="section-sub">In een markt vol wisselende kwaliteit kiest u bij Shexo Decoratie voor zekerheid, garantie en aantoonbare vakervaring.</p>
+        <div class="usp-list">
+          <div class="usp-item">
+            <div class="usp-num">01</div>
+            <div>
+              <h4>5 jaar internationale vakervaring</h4>
+              <p>Meer dan 50 projecten op villa's, hotels en commerciële panden in Turkije en Cyprus. Die precisie brengen we naar uw woning.</p>
+            </div>
+          </div>
+          <div class="usp-item">
+            <div class="usp-num">02</div>
+            <div>
+              <h4>Btw-factuur voor uw premies</h4>
+              <p>Elke opdracht wordt gefactureerd met officiële BTW-factuur. Vereist voor Vlaamse renovatiepremies en juridisch beschermd.</p>
+            </div>
+          </div>
+          <div class="usp-item">
+            <div class="usp-num">03</div>
+            <div>
+              <h4>Garantie op elk project</h4>
+              <p>U krijgt garantie op het geleverde werk. Bij een probleem komen we terug zonder discussie.</p>
+            </div>
+          </div>
+          <div class="usp-item">
+            <div class="usp-num">04</div>
+            <div>
+              <h4>Lokaal, persoonlijk & één aanspreekpunt</h4>
+              <p>Mohammad Ibrahim Shexo werkt zelf op elke werf. Geen wisselende arbeiders, geen verrassingen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usp-visual">
+        <div class="usp-quote">Voor particulieren en winkeliers die betrouwbare gyproc-afwerking zoeken, biedt Shexo Decoratie de zekerheid van 5 jaar internationale vakervaring aan een eerlijke prijs, zonder verrassingen.</div>
+        <div class="usp-author">
+          <div class="usp-avatar">MS</div>
+          <div class="usp-author-info">
+            <strong>Mohammad Ibrahim Shexo</strong>
+            <span>Oprichter, Shexo Decoratie</span>
+          </div>
+        </div>
+        <div class="usp-stats">
+          <div class="usp-stat">
+            <strong>50+</strong>
+            <span>Afgewerkte projecten</span>
+          </div>
+          <div class="usp-stat">
+            <strong>5 jaar.</strong>
+            <span>Internationale ervaring</span>
+          </div>
+          <div class="usp-stat">
+            <strong>100%</strong>
+            <span>BTW-plichtig</span>
+          </div>
+          <div class="usp-stat">
+            <strong>24u</strong>
+            <span>Reactietijd</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIE -->
+<section class="visie" id="visie">
+  <div class="container">
+    <div class="section-label">Onze Visie</div>
+    <h2 class="section-title" style="max-width:600px;">Vakmanschap verdient vertrouwen</h2>
+    <p class="visie-text">In een markt vol onbetrouwbare vakmensen en informele arbeiders zonder garantie, gelooft Shexo Decoratie in één principe: kwaliteit en eerlijkheid gaan samen. We bouwen niet alleen muren en plafonds, we bouwen vertrouwen, project per project, in Mechelen, Vilvoorde en de ruime omgeving.</p>
+    <div class="visie-tagline">"Niet de goedkoopste. Wel de betrouwbaarste."</div>
+  </div>
+</section>
+
+<!-- DOELGROEP -->
+<section class="doelgroep" id="doelgroep">
+  <div class="container">
+    <div class="section-label">Voor wie</div>
+    <h2 class="section-title">Voor wie werken wij?</h2>
+    <p class="section-sub">Shexo Decoratie bedient zowel particuliere gezinnen als commerciële klanten met dezelfde vakprecisie en professionele aanpak.</p>
+    <div class="doelgroep-grid">
+      <div class="dg-card">
+        <div class="dg-tag">B2C — Particulieren</div>
+        <h3>Gezinnen die renoveren</h3>
+        <p>Woningeigenaars tussen 28–55 jaar in Mechelen, Vilvoorde en omgeving die hun woning renoveren en zoeken naar een betrouwbare vakman met officiële factuur en premie-compatibele uitvoering.</p>
+        <ul class="dg-features">
+          <li>Officiële factuur voor renovatiepremies</li>
+          <li>Garantie op alle uitgevoerde werken</li>
+          <li>Persoonlijk aanspreekpunt, geen tussenpersonen</li>
+          <li>Nette uitvoering zonder rompslomp</li>
+        </ul>
+      </div>
+      <div class="dg-card b2b">
+        <div class="dg-tag">B2B — Winkeliers & Horeca</div>
+        <h3>Commerciële klanten</h3>
+        <p>Handelaars, horecauitbaters en projectontwikkelaars die hun pand snel en professioneel willen herinrichten met minimale hinder voor hun dagelijkse activiteit.</p>
+        <ul class="dg-features">
+          <li>Systeemplafonds & akoestische wanden</li>
+          <li>Snelle uitvoering — minimale hinder</li>
+          <li>Compatibel met Centrumpremie Vilvoorde</li>
+          <li>Grotere projecten tot 500 m²</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIEVEN -->
+<section class="tarieven" id="tarieven">
+  <div class="container">
+    <div class="tarieven-header">
+      <div>
+        <div class="section-label">Prijzen</div>
+        <h2 class="section-title">Indicatieve Tarieven</h2>
+      </div>
+      <div class="tarieven-note">Alle prijzen excl. BTW — exacte offerte na plaatsbezoek</div>
+    </div>
+    <div class="tarieven-grid">
+      <div class="tarief-card">
+        <div class="tarief-type">Voorzetwand</div>
+        <div class="tarief-price">€ 35</div>
+        <div class="tarief-unit">per m²</div>
+        <div class="tarief-desc">Standaard gyproc-voorzetwand, perfect afgewerkt</div>
+      </div>
+      <div class="tarief-card featured">
+        <div class="tarief-badge">Meest gevraagd</div>
+        <div class="tarief-type">Scheidingswand</div>
+        <div class="tarief-price">€ 42</div>
+        <div class="tarief-unit">per m²</div>
+        <div class="tarief-desc">Standaard of akoestische scheidingswand op maat</div>
+      </div>
+      <div class="tarief-card">
+        <div class="tarief-type">Gyproc Plafond</div>
+        <div class="tarief-price">€ 52</div>
+        <div class="tarief-unit">per m²</div>
+        <div class="tarief-desc">Strak, vlak gyproc-plafond — elke ruimte</div>
+      </div>
+      <div class="tarief-card">
+        <div class="tarief-type">Akoestisch systeem</div>
+        <div class="tarief-price">Op aanvraag</div>
+        <div class="tarief-unit">&nbsp;</div>
+        <div class="tarief-desc">Gecertificeerde akoestische isolatie op maat</div>
+      </div>
+      <div class="tarief-card">
+        <div class="tarief-type">Volledig pakket</div>
+        <div class="tarief-price">Op aanvraag</div>
+        <div class="tarief-unit">&nbsp;</div>
+        <div class="tarief-desc">Inclusief pleister, egalisatie en volledige afwerking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WERKGEBIED -->
+<section class="werkgebied" id="werkgebied">
+  <div class="container">
+    <div class="section-label">Werkgebied</div>
+    <h2 class="section-title">Waar zijn wij actief?</h2>
+    <p class="section-sub">Actief in Mechelen, Vilvoorde en de ruime omgeving, steeds binnen 30 minuten van onze thuisbasis in Vilvoorde.</p>
+    <div class="werkgebied-grid">
+      <div class="regio-list">
+        <div class="regio-item primary">
+          <div class="regio-dot"></div>
+          Vilvoorde
+          <span class="regio-tag">Thuisbasis</span>
+        </div>
+        <div class="regio-item primary">
+          <div class="regio-dot"></div>
+          Mechelen
+          <span class="regio-tag">Kernregio</span>
+        </div>
+        <div class="regio-item">
+          <div class="regio-dot"></div>
+          Grimbergen
+        </div>
+        <div class="regio-item">
+          <div class="regio-dot"></div>
+          Zaventem
+        </div>
+        <div class="regio-item">
+          <div class="regio-dot"></div>
+          Lier
+        </div>
+        <div class="regio-item">
+          <div class="regio-dot"></div>
+          Aarschot
+        </div>
+        <div class="regio-item" style="border-style:dashed; color: var(--gray);">
+          <div class="regio-dot" style="background: var(--light-gray);"></div>
+          Andere gemeente? Vraag gerust!
+        </div>
+      </div>
+      <div class="werkgebied-map">
+        <div class="map-visual">📍</div>
+        <div class="map-text">
+          <strong>Mechelen & Vilvoorde</strong>
+          Wij zijn actief in de volledige regio Mechelen–Vilvoorde en omliggende gemeenten, steeds binnen 30 minuten rijafstand.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Wat klanten zeggen</div>
+    <h2 class="section-title">Tevreden klanten</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Mohammad heeft ons plafond perfect afgewerkt. Op tijd, netjes en met een officiële factuur. Dankzij de BTW-factuur konden we ook onze renovatiepremie aanvragen. Absoluut aanbevolen!"</p>
+        <div class="review-author">Familie De Smedt</div>
+        <div class="review-location">Vilvoorde</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Eindelijk een vakman die zijn afspraken nakomt en kwaliteitswerk levert. De akoestische wand in onze zaak is perfect uitgevoerd. Het resultaat is beter dan verwacht."</p>
+        <div class="review-author">Zaakvoerder restaurant</div>
+        <div class="review-location">Mechelen</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Professioneel, snel en kwaliteitsvol. Mohammad werkte zelf op de werf en communiceerde duidelijk over elke stap. We werken zeker opnieuw samen voor de volgende kamer."</p>
+        <div class="review-author">Particuliere klant</div>
+        <div class="review-location">Grimbergen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Vraag een gratis offerte aan</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Neem contact op</h3>
+        <p>Wij reageren binnen 24 uur op uw aanvraag. Een plaatsbezoek is gratis en vrijblijvend.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            0465 16 54 74
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            info@shexo.decoratie.be
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            Vilvoorde & Mechelen — Vlaanderen
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            Ma–Za: 07:00 – 18:00
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Offerte aanvragen</h3>
+        <p class="form-note">Wij reageren binnen 24 uur, plaatsbezoek gratis en vrijblijvend.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Voornaam *</label>
+            <input type="text" placeholder="Voornaam">
+          </div>
+          <div class="form-group">
+            <label>Achternaam *</label>
+            <input type="text" placeholder="Achternaam">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>E-mailadres *</label>
+            <input type="email" placeholder="uw@email.be">
+          </div>
+          <div class="form-group">
+            <label>Telefoonnummer *</label>
+            <input type="tel" placeholder="04XX XX XX XX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gemeente *</label>
+            <input type="text" placeholder="Mechelen, Vilvoorde...">
+          </div>
+          <div class="form-group">
+            <label>Oppervlakte (m²)</label>
+            <input type="text" placeholder="Bijv. 40 m²">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Type werk *</label>
+          <select>
+            <option value="">— Kies een dienst —</option>
+            <option>Plafondbekleding</option>
+            <option>Voorzetwand / scheidingswand</option>
+            <option>Akoestische isolatie</option>
+            <option>Volledig afwerkingspakket</option>
+            <option>Brandwerende systemen</option>
+            <option>Sanitaire bekleding</option>
+            <option>Andere</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bericht / Bijkomende info</label>
+          <textarea placeholder="Beschrijf kort uw project..."></textarea>
+        </div>
+        <button type="button" class="form-submit" onclick="alert('Bedankt voor uw aanvraag! Dit formulier is momenteel een demonstratie.')">
+          Stuur mijn aanvraag →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">Shexo <span>Decoratie</span></div>
+      <p>Gyproc-renovaties voor particulieren en winkeliers in Mechelen, Vilvoorde en omgeving. BTW-plichtige eenmanszaak — officiële factuur, garantie en 5 jaar internationale vakervaring.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Diensten</h4>
+      <ul class="footer-links">
+        <li><a href="#diensten">Plafondbekleding</a></li>
+        <li><a href="#diensten">Akoestische isolatie</a></li>
+        <li><a href="#diensten">Brandwerende systemen</a></li>
+        <li><a href="#diensten">Binnenpleister</a></li>
+        <li><a href="#diensten">Sanitaire bekleding</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:0465165474">0465 16 54 74</a></li>
+        <li><a href="mailto:info@shexo.decoratie.be">info@shexo.decoratie.be</a></li>
+        <li><a href="#contact">Offerte aanvragen</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Shexo Decoratie — Mohammad Ibrahim Shexo — BTW-plichtige eenmanszaak</span>
+    <span>Mechelen & Vilvoorde — Vlaanderen</span>
+  </div>
+</footer>
+
+</body>
+</html>
