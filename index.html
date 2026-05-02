@@ -1192,6 +1192,225 @@
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer { padding: 48px 24px; }
   }
+
+  /* ── ACHTERGRONDKLEUR AANPASSING ── */
+  .services   { background: #EBF4FA; }
+  .usp        { background: #EBF4FA; }
+  .tarieven   { background: #EBF4FA; }
+  .reviews    { background: #EBF4FA; }
+  .contact    { background: #EBF4FA; }
+  .service-card  { background: #F7FBFD; }
+  .dg-card       { background: #F7FBFD; }
+  .contact-form  { background: #F7FBFD; }
+  .review-card   { background: #F7FBFD; }
+
+  /* ── EXTRA RESPONSIVE VOOR GSM (max 600px) ── */
+  @media (max-width: 600px) {
+    nav { padding: 14px 16px; }
+
+    .hero { padding: 90px 16px 60px; }
+    .hero h1 { font-size: 28px; }
+    .hero-sub { font-size: 15px; }
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+
+    section { padding: 56px 16px; }
+
+    .trust-bar { padding: 16px; gap: 16px; flex-direction: column; align-items: flex-start; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .tarieven-grid { grid-template-columns: 1fr; }
+    .reviews-grid  { grid-template-columns: 1fr; }
+
+    .tarieven-header { flex-direction: column; align-items: flex-start; }
+    .tarieven-note { width: 100%; }
+
+    .dg-card { padding: 28px 20px; }
+    .usp-visual { padding: 28px 20px; }
+    .usp-quote { font-size: 17px; }
+    .usp-stats { grid-template-columns: 1fr 1fr; }
+
+    .contact-form { padding: 24px 16px; }
+    .form-row { grid-template-columns: 1fr; }
+
+    .visie-tagline { font-size: 18px; padding: 14px 20px; }
+
+    .werkgebied-grid { grid-template-columns: 1fr; gap: 32px; }
+    .werkgebied-map { min-height: 200px; padding: 32px 20px; }
+
+    footer { padding: 40px 16px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+
+    .social-links { flex-direction: column; }
+    .social-link { justify-content: center; }
+  }
+
+  /* ── GSM FIXES ── */
+  @media (max-width: 640px) {
+
+/* Titel niet laten afsnijden */
+.hero h1 {
+  font-size: 26px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Hero afbeelding correct schalen */
+.hero-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero-card {
+  padding: 12px;
+}
+
+/* Hero kaart niet te groot laten worden */
+.hero-visual {
+  width: 100%;
+}
+
+/* Knoppen volledig breed en gestapeld */
+.hero-btns {
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn-primary,
+.btn-ghost {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 14px 20px;
+}
+
+/* Sectie padding kleiner op gsm */
+section {
+  padding: 48px 14px;
+}
+
+/* Navigatie logo kleiner */
+.nav-logo {
+  font-size: 18px;
+}
+}
+
+/* ── HAMBURGER MENU ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+    z-index: 200;
+    transition: opacity 0.2s;
+  }
+
+  .hamburger:hover { opacity: 0.85; }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--dark);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #0D1B2A;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      z-index: 9999;
+    }
+
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(13, 27, 42, 0.98);
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      z-index: 150;
+    }
+
+    .nav-links.open li {
+      width: 80%;
+      max-width: 320px;
+    }
+
+    .nav-links.open a {
+      font-size: 18px;
+      color: var(--white);
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 16px 24px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-links.open a:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .nav-links.open .nav-cta {
+      background: var(--accent) !important;
+      color: var(--dark) !important;
+      border-color: var(--accent) !important;
+      font-size: 18px;
+      font-weight: 700 !important;
+    }
+
+    .nav-links.open .nav-cta:hover {
+      opacity: 0.88;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1206,6 +1425,11 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#contact" class="nav-cta">Offerte aanvragen</a></li>
   </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1640,6 +1864,22 @@
     <span>Mechelen & Vilvoorde — Vlaanderen</span>
   </div>
 </footer>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-links');
+    const btn = document.querySelector('.hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  // Sluit menu bij klikken op een link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
